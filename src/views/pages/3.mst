@@ -83,7 +83,7 @@
 
     <button class="pergunta-botao" id="poco" redirect-link="https://pay.segurechekout.online/lqv130OqN0bgxbj">Resgatar</button>
     
-    <button class="fixed-button" id="fixed-button-boombox" redirect-link="https://pay.segurechekout.online/lqv130OqN0bgxbj">RESGATAR AGORA</button>
+    <button class="fixed-button" id="fixed-button-boombox" onclick="window.open('https://pay.segurechekout.online/lqv130OqN0bgxbj' + window.location.search, '_blank')">RESGATAR AGORA</button>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -106,7 +106,7 @@
 
         <p class="promotitle">Ofertas especiais 🔥</p>
 
-        <div class="button-container" href="#" onclick="window.open(&#39;https://pay.finalizar-compra-br.site/DPXw3Xd24ek3zmp&#39; + window.location.search, &#39;_blank&#39;)">
+        <div class="button-container" href="#" onclick="window.open('https://pay.finalizar-compra-br.site/DPXw3Xd24ek3zmp' + window.location.search, '_blank')">
             <button class="styled-button" style="background-color: #ffffff;">
                 <span class="button-text">
                     <span class="button-title" style="color: #0169EB">LEVAR 3 UNIDADES</span>
